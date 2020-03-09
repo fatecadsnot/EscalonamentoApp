@@ -4,11 +4,17 @@ import java.util.Scanner;
 
 public class AppSistema {
 	public static void main(String[] args) {
+		
 		Scanner scanner = new Scanner(System.in);
 		FIFO fifo = new FIFO();
 		AlgoritmosDePrioridade algPri = new AlgoritmosDePrioridade();
 		RoundRobbin robbin = new RoundRobbin();
 		SJF	sjf = new SJF();
+		
+		Processos processo01 = new Processos(24);
+		Processos processo02 = new Processos(3);
+		Processos processo03 = new Processos(3);
+		Processos processo04 = new Processos(22);
 		
 		System.out.println("Escolha o tipo de escalonamento");
 		System.out.println("1- FIFO");
@@ -19,10 +25,13 @@ public class AppSistema {
 		
 		switch (escolha) {
 		case 1:
-			fifo.A();
+			fifo.AdicionarProcesso(processo01);
+			fifo.AdicionarProcesso(processo02);
+			fifo.AdicionarProcesso(processo03);
+			fifo.calcularTempoMedio();
 			break;
 		case 2:
-			fifo.A();
+			
 			break;
 		case 3:
 			algPri.A();
@@ -30,6 +39,7 @@ public class AppSistema {
 		case 4:
 			sjf.A();
 			break;
+		
 		default:
 			
 			break;
