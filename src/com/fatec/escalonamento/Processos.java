@@ -4,6 +4,8 @@ public class Processos {
 	private double tempoSurto;
 	private int prioridade;
 	
+	
+	
 	public Processos(double _tempoSurto) {
 		this.tempoSurto = _tempoSurto;
 		

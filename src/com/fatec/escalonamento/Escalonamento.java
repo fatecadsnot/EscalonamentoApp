@@ -1,6 +1,6 @@
 package com.fatec.escalonamento;
 
-public class Escalonamento {
+public abstract class Escalonamento {
 	private double tempoTotal = 0;
     double [] tempoEspera = new double[10];
 	private int qtdProcessos;
@@ -29,5 +29,8 @@ public class Escalonamento {
 	public void setQtdProcessos(int qtdProcessos) {
 		this.qtdProcessos = qtdProcessos;
 	}
+	
+	public abstract void adicionarProcesso(Processos processo);
+	
 }
 	

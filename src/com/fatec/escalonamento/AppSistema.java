@@ -25,20 +25,20 @@ public class AppSistema {
 		
 		switch (escolha) {
 		case 1:
-			fifo.AdicionarProcesso(processo01);
-			fifo.AdicionarProcesso(processo02);
-			fifo.AdicionarProcesso(processo03);
+			fifo.adicionarProcesso(processo01);
+			fifo.adicionarProcesso(processo02);
+			fifo.adicionarProcesso(processo03);
 			fifo.calcularTempoMedio();
 			break;
 		case 2:
-			sjf.AdicionarProcesso(processo01);	
-			sjf.AdicionarProcesso(processo02);	
-			sjf.AdicionarProcesso(processo03);
-			sjf.AdicionarProcesso(processo04);	
+			sjf.adicionarProcesso(processo01);	
+			sjf.adicionarProcesso(processo02);	
+			sjf.adicionarProcesso(processo03);
+			sjf.adicionarProcesso(processo04);	
 			sjf.calcularTempoMedio();
 			break;
 		case 3:
-			algPri.A();
+			
 			break;
 		case 4:
 			

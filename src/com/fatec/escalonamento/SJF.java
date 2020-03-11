@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class SJF extends Escalonamento{
 	private int cont;
 	private double aux;
-	public void AdicionarProcesso(Processos processo) {
+	public void adicionarProcesso(Processos processo) {
 		//Aumenta variável que controla quantidade de processos 
 		setQtdProcessos(getQtdProcessos()+1);
 		//Percorre o vetor procurando a posição vazia e seta o tempo de espera
@@ -35,4 +35,10 @@ public class SJF extends Escalonamento{
 		// imprime o tempo medio
 		System.out.println(media);
 	}
+
+	
+
+	
+
+	
 }

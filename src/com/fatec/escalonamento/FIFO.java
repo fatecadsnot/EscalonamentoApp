@@ -3,7 +3,7 @@ package com.fatec.escalonamento;
 public class FIFO extends Escalonamento{
 	private double aux;
 	private int cont;
-	public void AdicionarProcesso(Processos processo) {
+	public void adicionarProcesso(Processos processo) {
 		//Aumenta variável que controla quantidade de processos 
 		setQtdProcessos(getQtdProcessos()+1);
 		//Percorre o vetor procurando a posição vazia e seta o tempo de espera
@@ -32,5 +32,6 @@ public class FIFO extends Escalonamento{
 		System.out.println(media);
 	}
 
+	
 	
 }
