@@ -5,26 +5,25 @@ public class FIFO extends Escalonamento {
     private double aux;
     private int cont;
 
-    public void AdicionarProcesso(Processos processo) {
+    public void adicionarProcesso(Processos processo) {
         //Aumenta vari�vel que controla quantidade de processos 
         setQtdProcessos(getQtdProcessos() + 1);
         //Percorre o vetor procurando a posi��o vazia e seta o tempo de espera
-        for (int i = 1; i < tempoEspera.length; i++) {
-            if (tempoEspera[i] == 0) {
-                tempoEspera[i] = processo.getTempoSurto() + tempoEspera[i - 1];
+        for (int i = 1; i < getTempoEspera().length; i++) {
+            if (getTempoEspera()[i] == 0) {
+                getTempoEspera()[i] = processo.getTempoSurto() + getTempoEspera()[i - 1];
                 //verificador
-                System.out.println(tempoEspera[i]);
+                System.out.println(getTempoEspera()[i]);
                 cont = i;
                 break;
             }
         }
-
     }
 
     public void calcularTempoMedio() {
         //Soma todos os tempos de espera
         for (int i = 0; i <= cont - 1; i++) {
-            aux += tempoEspera[i];
+            aux += getTempoEspera()[i];
         }
         setTempoTotal(aux);
         // imprime o tempo total

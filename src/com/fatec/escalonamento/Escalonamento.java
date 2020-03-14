@@ -3,7 +3,7 @@ package com.fatec.escalonamento;
 public class Escalonamento {
 
     private double tempoTotal = 0;
-    double[] tempoEspera = new double[10];
+    private double[] tempoEspera = new double[10];
     private int qtdProcessos;
 
     public double getTempoTotal() {

@@ -7,15 +7,15 @@ public class SJF extends Escalonamento {
     private int cont;
     private double aux;
 
-    public void AdicionarProcesso(Processos processo) {
+    public void adicionarProcesso(Processos processo) {
         //Aumenta vari�vel que controla quantidade de processos 
         setQtdProcessos(getQtdProcessos() + 1);
         //Percorre o vetor procurando a posi��o vazia e seta o tempo de espera
-        for (int i = 1; i < tempoEspera.length; i++) {
-            if (tempoEspera[i] == 0) {
-                tempoEspera[i] = processo.getTempoSurto();
+        for (int i = 1; i < getTempoEspera().length; i++) {
+            if (getTempoEspera()[i] == 0) {
+                getTempoEspera()[i] = processo.getTempoSurto();
                 //verificador
-                System.out.println(tempoEspera[i]);
+                System.out.println(getTempoEspera()[i]);
                 cont = i;
                 break;
             }
@@ -25,9 +25,9 @@ public class SJF extends Escalonamento {
 
     public void calcularTempoMedio() {
         //Ordena o array de forma crescente
-        Arrays.sort(tempoEspera);
+        Arrays.sort(getTempoEspera());
         //Soma todos os tempos de espera
-        for (double i : tempoEspera) {
+        for (double i : getTempoEspera()) {
             aux += i;
         }
         setTempoTotal(aux);
