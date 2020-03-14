@@ -33,4 +33,3 @@ public abstract class Escalonamento {
 	public abstract void adicionarProcesso(Processos processo);
 	
 }
-	
