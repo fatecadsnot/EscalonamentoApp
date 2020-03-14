@@ -1,6 +1,6 @@
 package com.fatec.escalonamento;
 
-public class Processos extends Escalonamento {
+public class Processos {
 
     private double tempoSurto;
     private int prioridade;
