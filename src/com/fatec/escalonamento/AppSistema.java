@@ -60,8 +60,8 @@ public class AppSistema {
                     algPri.calcularTempoMedio();
                     break;
                 case 4:
-
-                    break;
+                	robbin.teste(3, 2);
+                   break;
 
                 case 5:
                     System.out.println("Programa Finalizado");
